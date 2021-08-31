@@ -27,3 +27,18 @@ Future<RecommendationResponse> getRecommendations(String key) async {
     throw Exception('Something went wrong');
   }
 }
+
+Future<RecommendationResponse> searchTracks(String term) async {
+  final queryString = Uri(queryParameters: Params.searchTracks(term)).query;
+  final endpointURL = baseURL + Endpoint.search;
+
+  String requestURL = endpointURL + '?' + queryString;
+
+  var response = await http.get(Uri.parse(requestURL), headers: headers);
+
+  if (response.statusCode == 200) {
+    return RecommendationResponse.fromJson(jsonDecode(response.body));
+  } else {
+    throw Exception('Something went wrong');
+  }
+}

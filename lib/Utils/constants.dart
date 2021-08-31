@@ -2,8 +2,8 @@
 final String baseURL = "https://shazam.p.rapidapi.com/";
 
 class Endpoint {
-  static final recommenations = "songs/list-recommendations";
-  static final search = "search";
+  static const recommenations = "songs/list-recommendations";
+  static const search = "search";
 }
 
 class Params {
@@ -11,7 +11,7 @@ class Params {
     return {'key': key};
   }
 
-  static Map<String, String> getSearch(String term) {
+  static Map<String, String> searchTracks(String term) {
     return {'term': term};
   }
 }
