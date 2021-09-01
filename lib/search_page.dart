@@ -1,9 +1,10 @@
 import 'dart:async';
 
-import 'package:exercise_asynchronous_programming/Utils/NetworkManager.dart';
-import 'package:exercise_asynchronous_programming/Utils/Track.dart';
+import 'package:exercise_asynchronous_programming/Utils/network_manager.dart';
+import 'package:exercise_asynchronous_programming/Utils/track.dart';
 import 'package:flutter/material.dart';
 
+// Search page - SHws searched tracks based on what user searched.
 class SearchPage extends StatefulWidget {
   const SearchPage({Key? key}) : super(key: key);
 
@@ -15,6 +16,7 @@ class _SearchPageState extends State<SearchPage> {
   String searchText = "";
   final tracksStream = StreamController<List<Track>>();
 
+// * Used StreamBuilder to build UI from async request.
   @override
   Widget build(BuildContext context) {
     return Scaffold(
