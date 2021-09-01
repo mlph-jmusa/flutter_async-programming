@@ -45,8 +45,10 @@ class _RecommendationsPageState extends State<RecommendationsPage> {
                             padding: const EdgeInsets.all(8.0),
                             child: Row(
                               children: [
-                                Image.network(track.images.background,
-                                    width: 80, height: 80),
+                                ClipOval(
+                                  child: Image.network(track.images.background,
+                                      width: 80, height: 80),
+                                ),
                                 Container(width: 20),
                                 Flexible(
                                   child: Column(
