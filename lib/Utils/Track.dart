@@ -1,16 +1,5 @@
 // ignore_for_file: file_names
 
-class RecommendationResponse {
-  List<Track> tracks;
-
-  RecommendationResponse(this.tracks);
-
-  factory RecommendationResponse.fromJson(Map<String, dynamic> json) {
-    return RecommendationResponse(
-        json['tracks'].map<Track>((e) => Track.fromJson(e)).toList());
-  }
-}
-
 class Track {
   String key;
   String title;

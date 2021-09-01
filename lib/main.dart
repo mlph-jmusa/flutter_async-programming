@@ -1,4 +1,5 @@
 import 'package:exercise_asynchronous_programming/recommendations.dart';
+import 'package:exercise_asynchronous_programming/search_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -60,7 +61,12 @@ class HomePage extends StatelessWidget {
                         MaterialStateProperty.all<Color>(Colors.white))),
             Container(width: 15),
             OutlinedButton(
-                onPressed: () => {},
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const SearchPage()));
+                },
                 child: const Text('Search'),
                 style: ButtonStyle(
                     fixedSize: MaterialStateProperty.all<Size>(
