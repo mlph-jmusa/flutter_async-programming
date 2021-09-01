@@ -6,6 +6,7 @@ void main() {
   runApp(const MoviesApp());
 }
 
+// Main
 class MoviesApp extends StatelessWidget {
   const MoviesApp({Key? key}) : super(key: key);
 
@@ -33,6 +34,7 @@ class MoviesApp extends StatelessWidget {
   }
 }
 
+// Home page
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -40,6 +42,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
+// * Build UI with 2 buttons to navigate to recommendations and search pages.
     return Align(
       alignment: Alignment.center,
       child: Center(

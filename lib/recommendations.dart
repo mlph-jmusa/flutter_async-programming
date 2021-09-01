@@ -1,7 +1,8 @@
-import 'package:exercise_asynchronous_programming/Utils/NetworkManager.dart';
-import 'package:exercise_asynchronous_programming/Utils/Track.dart';
+import 'package:exercise_asynchronous_programming/Utils/network_manager.dart';
+import 'package:exercise_asynchronous_programming/Utils/track.dart';
 import 'package:flutter/material.dart';
 
+// * Recommendations page - shows recommended tracks based on key.
 class RecommendationsPage extends StatefulWidget {
   const RecommendationsPage({Key? key}) : super(key: key);
 
@@ -10,6 +11,7 @@ class RecommendationsPage extends StatefulWidget {
 }
 
 class _RecommendationsPageState extends State<RecommendationsPage> {
+  // * Used future builder to build UI from async function
   @override
   Widget build(BuildContext context) {
     return Scaffold(

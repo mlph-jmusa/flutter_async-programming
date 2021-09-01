@@ -1,5 +1,6 @@
 // ignore_for_file: file_names
 
+// * Model for track fom Shazam
 class Track {
   String key;
   String title;
@@ -14,6 +15,7 @@ class Track {
   }
 }
 
+// * Model for Images inside Track
 class Images {
   String background;
 
