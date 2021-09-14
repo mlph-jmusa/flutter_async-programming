@@ -1,5 +1,5 @@
-import 'package:exercise_asynchronous_programming/recommendations.dart';
-import 'package:exercise_asynchronous_programming/search_page.dart';
+import './recommendations/recommendations.dart';
+import './search/search_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
